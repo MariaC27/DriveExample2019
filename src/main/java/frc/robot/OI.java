@@ -7,6 +7,8 @@
 
 package frc.robot;
 
+import static org.junit.Assume.assumeNoException;
+
 import edu.wpi.first.wpilibj.*;
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -44,6 +46,16 @@ public class OI {
   Joystick rightJoystick;
   Joystick leftJoystick;
   Joystick logitech;
+
+
+  public OI(){
+
+    rightJoystick = new Joystick(0);
+    leftJoystick = new Joystick(1);
+    logitech = new Joystick(2);
+
+
+  }
 
   public Joystick getRightJoystick(){
     return rightJoystick;
